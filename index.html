@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio de Oscilaciones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="laboratorio">
+    <header>
+      <span class="etiqueta">MATEMÁTICAS INTERACTIVAS</span>
+      <h1>Laboratorio de Oscilaciones</h1>
+      <p>Geometría dinámica y transformación de funciones</p>
+    </header>
+
+    <section class="grafica">
+      <svg id="grafico" viewBox="0 0 800 500"
+           preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <clipPath id="areaGrafica">
+            <rect x="60" y="30" width="700" height="400"/>
+          </clipPath>
+        </defs>
+        <g id="cuadricula"></g>
+        <g id="regiones" clip-path="url(#areaGrafica)"></g>
+        <g id="ejes"></g>
+        <path id="onda" clip-path="url(#areaGrafica)"/>
+      </svg>
+    </section>
+
+    <section class="ecuacion">
+      <h2>Ecuación de la función</h2>
+      <div id="formula">f(x) = A · sen(B(x − C)) + D</div>
+      <p id="valores"></p>
+    </section>
+
+    <section class="controles">
+      <h2>Controles geométricos</h2>
+
+      <div class="control">
+        <label>Amplitud (A) <output id="vA"></output></label>
+        <input id="amplitud" type="range" min="0.2" max="3"
+               step="0.05" value="1.4">
+      </div>
+
+      <div class="control">
+        <label>Período (T) <output id="vT"></output></label>
+        <input id="periodo" type="range" min="2" max="12"
+               step="0.1" value="6.28">
+      </div>
+
+      <div class="control">
+        <label>Desplazamiento horizontal (C) <output id="vC"></output></label>
+        <input id="desplazamientoX" type="range" min="-6" max="6"
+               step="0.1" value="0">
+      </div>
+
+      <div class="control">
+        <label>Desplazamiento vertical (D) <output id="vD"></output></label>
+        <input id="desplazamientoY" type="range" min="-3" max="3"
+               step="0.1" value="0">
+      </div>
+
+      <div class="control">
+        <label>Movimiento del eje X <output id="vEje"></output></label>
+        <input id="ejeX" type="range" min="-3" max="3"
+               step="0.1" value="0">
+      </div>
+
+      <div class="opciones">
+        <label><input type="checkbox" id="sombreado" checked>
+          Mostrar regiones sombreadas</label>
+        <label><input type="checkbox" id="cuadriculaVisible" checked>
+          Mostrar cuadrícula</label>
+      </div>
+
+      <button id="reiniciar">↺ Restaurar valores</button>
+    </section>
+
+    <footer>LABORATORIO MATEMÁTICO · EXPERIMENTA · OBSERVA · DESCUBRE</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

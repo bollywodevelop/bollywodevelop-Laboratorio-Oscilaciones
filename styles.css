@@ -1,0 +1,161 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  background: #10131c;
+  color: #f2f3f8;
+  font-family: Arial, sans-serif;
+}
+
+.laboratorio {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  background: #191e2b;
+  border: 1px solid #30394c;
+  border-radius: 18px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.etiqueta {
+  color: #dc76a8;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(25px, 5vw, 38px);
+  margin: 12px 0;
+}
+
+header p {
+  color: #9ca8bc;
+}
+
+.grafica {
+  background: #111722;
+  border-radius: 14px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#onda {
+  fill: none;
+  stroke: #e47eae;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.ecuacion {
+  margin-top: 22px;
+  padding: 22px;
+  background: #111722;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ecuacion h2, .controles h2 {
+  font-size: 18px;
+}
+
+#formula {
+  color: #e98ab8;
+  font-size: clamp(17px, 3vw, 25px);
+  font-weight: bold;
+  padding: 15px 0;
+  overflow-wrap: anywhere;
+}
+
+#valores {
+  color: #a8b3c7;
+  font-size: 13px;
+}
+
+.controles {
+  margin-top: 25px;
+}
+
+.control {
+  margin: 23px 0;
+}
+
+.control label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+output {
+  color: #e98ab8;
+  font-weight: bold;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #e47eae;
+  cursor: pointer;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #c4cbd8;
+  font-size: 13px;
+  margin: 25px 0;
+}
+
+input[type="checkbox"] {
+  accent-color: #e47eae;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #d86e9e;
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ed8cb8;
+}
+
+footer {
+  text-align: center;
+  color: #738096;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .laboratorio {
+    padding: 15px;
+  }
+}
